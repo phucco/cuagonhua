@@ -1,0 +1,7 @@
+.table-center tr td, .table-center tr th {
+	text-align: center;
+}
+
+.text-bold {
+	font-weight: bold;
+}
