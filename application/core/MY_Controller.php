@@ -25,14 +25,58 @@ class MY_Controller extends CI_Controller
 
 	}
 
+	
 	protected function _check_login()
 	{
-		// $url = $this->uri->segment(1);
+		$url = $this->uri->rsegment(2);
 
-		// if ( ! $this->_valid_login() && $url != 'login')
-		// {
-		// 	redirect(base_url('/login/'));
-		// }
+		if ( ! $this->_valid_login() && $url != 'destroy')
+		{
+			redirect(base_url('/login/'));
+		}
+	}
+
+	protected function _valid_login()
+	{
+		$login = $this->_get_row_token();
+
+		if ( $login )
+		{
+			$expired_at = $login->expired_at;
+			if (time() < strtotime($expired_at)) return TRUE;
+		}
+
+		return FALSE;
+	}
+
+	protected function _get_token()
+	{
+		$token = $this->session->userdata('anta_session');
+
+		if ( ! empty($token) )
+		{
+			return strval($token);
+		}
+
+		return FALSE;
+	}
+
+	public function _get_row_token()
+	{
+		$token = $this->_get_token();
+
+		if ( ! empty($token) )
+		{
+			$this->load->model('login_model');
+
+			$input = array();
+			$input['where'] = array('token' => $token);
+			$login = $this->login_model->get_row($input);
+
+			return $login;
+		}
+
+		return FALSE;
 	}
 
 	

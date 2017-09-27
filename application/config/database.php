@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'linhyeucun',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => 'nai_',
+	'dbprefix' => 'tlpv_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
