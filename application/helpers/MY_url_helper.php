@@ -5,11 +5,11 @@ function admin_assets($url = '')
 {
 	if (strpos($url, '/') == 0)
 	{
-	 	return base_url('/admin/' . substr($url, 1));
+	 	return base_url('/ad/' . substr($url, 1));
 	}
 	else
 	{
-		return base_url('/admin/' . $url);
+		return base_url('/ad/' . $url);
 	}
 }
 

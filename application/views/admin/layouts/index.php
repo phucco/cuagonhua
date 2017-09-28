@@ -2,15 +2,15 @@
 <html>
 <head>
 
-    <?php $this->load->view('layouts/head', $this->data); ?>
+    <?php $this->load->view('admin/layouts/head', $this->data); ?>
 
 </head>
 <body class="hold-transition skin-green sidebar-mini">
     <div class="wrapper">
 
-        <?php $this->load->view('layouts/header', $this->data); ?>
+        <?php $this->load->view('admin/layouts/header', $this->data); ?>
 
-        <?php $this->load->view('layouts/sidebar', $this->data); ?>
+        <?php $this->load->view('admin/layouts/sidebar', $this->data); ?>
 
 
         <!-- Content Wrapper -->
@@ -22,7 +22,7 @@
             <!-- Main content -->
             <section class="content">
 
-                <?php $this->load->view('layouts/alert', $this->data); ?>
+                <?php $this->load->view('admin/layouts/alert', $this->data); ?>
 
                 <?php $this->load->view($temp, $this->data); ?>
 
@@ -33,12 +33,12 @@
         </div>
         <!-- /.Content-wrapper -->
 
-        <?php $this->load->view('layouts/footer', $this->data); ?>
+        <?php $this->load->view('admin/layouts/footer', $this->data); ?>
 
     </div>
     <!-- ./wrapper -->
 
-    <?php $this->load->view('layouts/js_footer', $this->data); ?>
+    <?php $this->load->view('admin/layouts/js_footer', $this->data); ?>
 
 </body>
 </html>

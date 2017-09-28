@@ -20,17 +20,27 @@ class MY_Controller extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->_check_login();
-		$this->data['module'] = $this->uri->rsegment(1);
+		$url = $this->uri->segment(1);
+		$this->data['module'] = $url;
+
+		switch ($url) {
+			case 'admin':
+				$this->_check_login();
+				break;
+			
+			default:
+				
+				break;
+		}
 
 	}
 
 	
 	protected function _check_login()
 	{
-		$url = $this->uri->rsegment(2);
+		$url = $this->uri->rsegment(1);
 
-		if ( ! $this->_valid_login() && $url != 'destroy')
+		if ( ! $this->_valid_login() && $url != 'login')
 		{
 			redirect(base_url('/login/'));
 		}

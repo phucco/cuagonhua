@@ -14,7 +14,14 @@ class Linh extends MY_Controller
 
 	public function index()
 	{
-		$text = "namdeptrai";
-		pre($this->encrypt->encode($text));
+		pre($this->uri->segment(1));
+		if ($this->_valid_login())
+		{
+			pre(1);
+		}
+		else
+		{
+			pre(0);
+		}
 	}
 }

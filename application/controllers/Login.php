@@ -15,7 +15,7 @@ class Login extends MY_Controller
 
 	public function index()
 	{
-		//if ($this->_valid_login() && $url == 'login') redirect(base_url());
+		if ($this->_valid_login() && $this->uri->rsegment(1) == 'login') redirect(base_url());
 
 		$this->load->helper('string');
 		$token = random_string('md5' , 32);
@@ -91,7 +91,6 @@ class Login extends MY_Controller
 	{
 		if ($this->_valid_login())
 		{
-			pre('1');
 			$token = $this->_get_row_token();
 
 			$insertdata = array('expired_at' => date('Y-m-d H:i:s'));
@@ -105,9 +104,7 @@ class Login extends MY_Controller
 				redirect(base_url(),'refresh');
 			}	
 		}
-		else
-		{
-			pre('o');
-		}
+		
+		redirect(base_url('login/'),'refresh');
 	}
 }
