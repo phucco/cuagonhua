@@ -15,6 +15,9 @@ class Dashboard extends MY_Controller
 
 	public function index()
 	{
-		
+		$this->data['subnav'] = 'admin/layouts/subnav';
+		$this->data['small_content_header'] = 'Tất cả danh mục sản phẩm';
+		$this->data['temp'] = 'admin/layouts/blank';
+		$this->load->view('admin/layouts/index', $this->data);
 	}
 }

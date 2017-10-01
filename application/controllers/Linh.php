@@ -14,14 +14,12 @@ class Linh extends MY_Controller
 
 	public function index()
 	{
-		pre($this->uri->segment(1));
-		if ($this->_valid_login())
-		{
-			pre(1);
-		}
-		else
-		{
-			pre(0);
-		}
+		$this->load->helper('text');
+
+		$slug = 'ử ử a4 ẳ ấ ở có ưeo4hqwoeifh';
+
+
+				$slug = strtolower(url_title(convert_accented_characters($slug)));
+				pre($slug);
 	}
 }

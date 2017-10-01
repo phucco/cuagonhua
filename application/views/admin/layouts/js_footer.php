@@ -10,7 +10,25 @@
 	<script type="text/javascript" src="<?php echo admin_assets($js); ?>"></script>
 <?php endforeach; ?>
 <script type="text/javascript">
+	function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#image_upload').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#image").change(function(){
+    	$("#help-sentence").hide();
+        readURL(this);
+    });
+
 	$(function () {
+
 		<?php echo htmlspecialchars_decode($write_js); ?>
 	});
 </script>

@@ -47,7 +47,7 @@ class Login extends MY_Controller
 				if ($this->login_model->create($insertdata))
 				{
 					$this->session->set_userdata('anta_session', $token);
-					redirect(base_url(),'refresh');
+					redirect(base_url('admin/'),'refresh');
 				}
 				else
 				{

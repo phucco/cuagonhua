@@ -1,0 +1,99 @@
+/* Other container */
+#holder {
+	min-width:1200px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+/* Center my loader */
+#maximage {
+	position:relative ;
+    display:none;
+	z-index:2;
+}
+
+/*I want to style my pager*/
+#cycle-nav {
+    float:left;
+    margin-bottom:20px;
+	position:absolute;
+	bottom:5em;
+	right:8em;
+	z-index:10;
+}
+#cycle-nav ul {
+    list-style-type:none;
+}
+#cycle-nav ul li {
+    float:left;
+    margin:4px;
+}
+#cycle-nav ul li a{
+	zoom: 1;
+	filter: alpha(opacity=68);
+	opacity: 0.68;
+    float:left;
+    padding:3px;
+	background:#222;
+}
+#cycle-nav ul li a:hover{
+	zoom: 1;
+	filter: alpha(opacity=100);
+	opacity: 1;
+	}
+#cycle-nav ul li a img{
+	width:112px;
+	height:63px;
+	}
+#cycle-nav ul li.activeSlide {
+   background:#eda024;
+}
+#cycle-nav ul li.activeSlide a{
+	zoom: 1;
+	filter: alpha(opacity=100);
+	opacity: 1;
+	background:#eda024;
+	}
+
+/* Overwrite Maximage's default background-size */
+div.mc-image {
+	/*NOTE: Mozilla flickers when fading and using 'all', so we have to be specific with what property we want to transition:
+	 	If you are using fading transitions, use 'opacity: */
+	-webkit-transition: opacity 2.5s ease-in-out; 
+	-moz-transition: opacity 2.5s ease-in-out; 
+	-o-transition: opacity 2.5s ease-in-out; 
+	transition: opacity 2.5s ease-in-out;
+	
+	/*If you are using horizontal slide transitions, use the following CSS:*/
+	/*-webkit-transition: left 2.5s ease-in-out; 
+	-moz-transition: left 2.5s ease-in-out; 
+	-o-transition: left 2.5s ease-in-out; 
+	transition: left 2.5s ease-in-out;
+	*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}
+/* Other random styles */
+#controls{
+
+	}
+#arrow_left, #arrow_right {text-decoration:none; position:absolute;top:50%;margin-top:-25px; left:2em; z-index:10;}
+#arrow_right {left:auto;right:2em;}
+#play-pause{position:absolute; bottom:5em; left:2em;}
+a {color:#fff;}
+a:hover {text-decoration:none;}
+a:active {color:#999;}
+hr {clear:both;}
+p {margin-bottom:.75em;}
+.largeTxt {font-size:30px;}
+
+
+
+
