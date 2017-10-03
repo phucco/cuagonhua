@@ -96,13 +96,14 @@ class Category extends MY_Controller
 	{
 		$id = intval($id);
 		$category = $this->category_model->get_info($id);
-		$this->data['category'] = $category;
 
 		if ( empty($category) )
 		{
 			$this->session->mess('Danh mục không tồn tại.', 'danger');
 			redirect(base_url('admin/category/'),'refresh');
 		}
+
+		$this->data['category'] = $category;
 
 		$this->load->helper('form');
 		$this->load->helper('text');
@@ -161,7 +162,6 @@ class Category extends MY_Controller
 	{
 		$id = intval($id);
 		$category = $this->category_model->get_info($id);
-		$this->data['category'] = $category;
 
 		if ( empty($category) )
 		{

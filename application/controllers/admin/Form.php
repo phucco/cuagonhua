@@ -26,7 +26,21 @@ class Form extends MY_Controller
 
 	public function show($id)
 	{
+		$id = intval($id);
+		$form = $this->form_model->get_info($id);		
 
+		if ( empty($form) )
+		{
+			$this->session->mess('Yêu cầu liên hệ không tồn tại.', 'danger');
+			redirect(base_url('admin/form/'),'refresh');
+		}
+
+		$this->data['form'] = $form;
+
+		$this->data['subnav'] = 'admin/form/subnav';
+		$this->data['small_content_header'] = 'Xem yêu cầu liên hệ ID = ' . $id;
+		$this->data['temp'] = 'admin/form/show';
+		$this->load->view('admin/layouts/index', $this->data);
 	}
 
 	public function del($id)

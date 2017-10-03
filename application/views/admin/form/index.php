@@ -15,12 +15,20 @@
 					</thead>
 					<tbody>
 						<?php foreach ($list as $row) : ?>
-							<tr>
+							<tr>								
 								<td><?php echo $row->id;?></td>
-								<td><?php echo $row->name;?><br><?php echo $row->phone;?><br><?php echo $row->email;?></td>
+								<td>
+									<a href="<?php echo base_url('admin/form/show/' . $row->id); ?>" target="_blank">
+										<?php echo $row->name;?><br><?php echo $row->phone;?><br><?php echo $row->email;?>
+									</a>
+								</td>
 								<td><?php echo $row->company;?></td>
-								<td><strong><?php echo $row->title;?></strong><br><?php echo $row->message;?></td>
-								<td><?php echo $row->created_at; ?></td>
+								<td>
+									<a href="<?php echo base_url('admin/form/show/' . $row->id); ?>" target="_blank">
+										<strong><?php echo $row->title;?></strong><br><?php echo $row->message;?>
+									</a>
+								</td>
+								<td><?php echo $row->created_at; ?></td>								
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

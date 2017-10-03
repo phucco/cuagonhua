@@ -17,7 +17,7 @@
 						<?php foreach ($list as $row) : ?>
 							<tr>
 								<td><?php echo $row->id; ?></td>
-	                            <td><img src="<?php echo base_url('upload/gallery/' . $row->file_name); ?>" width="100%"></td>
+	                            <td><img src="<?php echo base_url('upload/gallery/' . $row->file_name); ?>" width="100%" alt="<?php echo $row->alt; ?>"></td>
 	                            <td><br/><?php echo $row->created_at; ?></td>
 								<td>
 	                                <a href="<?php echo base_url('upload/gallery/' . $row->file_name); ?>" class="btn btn-success" title="Xem kích thước đầy đủ" target="_blank">

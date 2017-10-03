@@ -94,14 +94,15 @@ class Product extends MY_Controller
 	public function edit($id)
 	{
 		$id = intval($id);
-		$product = $this->product_model->get_info($id);
-		$this->data['product'] = $product;
+		$product = $this->product_model->get_info($id);		
 
 		if ( empty($product) )
 		{
 			$this->session->mess('Sản phẩm không tồn tại.', 'danger');
 			redirect(base_url('admin/product/'),'refresh');
 		}
+		
+		$this->data['product'] = $product;
 
 		$this->load->helper('form');
 		$this->load->helper('text');
@@ -160,8 +161,7 @@ class Product extends MY_Controller
 	public function del($id)
 	{
 		$id = intval($id);
-		$product = $this->product_model->get_info($id);
-		$this->data['product'] = $product;
+		$product = $this->product_model->get_info($id);		
 
 		if ( empty($product) )
 		{
