@@ -11,7 +11,8 @@ class MY_Controller extends CI_Controller
 		'extra_css' => array(),
 		'extra_js' => array(),
 		'write_js' => '',
-		'temp' => 'errors/blank',
+		'temp' => 'admin/layouts/blank',
+		'sidebar' => 'lien_he/sidebar-1',
 		'subnav' => 'layouts/subnav',
 		'small_content_header' => ''
 	);

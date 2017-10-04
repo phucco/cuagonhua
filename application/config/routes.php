@@ -56,4 +56,4 @@ $route['admin'] = 'admin/dashboard';
 $route['logout'] = 'login/destroy';
 
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = TRUE;

@@ -27,7 +27,7 @@ class Form extends MY_Controller
 	public function show($id)
 	{
 		$id = intval($id);
-		$form = $this->form_model->get_info($id);		
+		$form = $this->form_model->get_info($id);
 
 		if ( empty($form) )
 		{
@@ -45,6 +45,6 @@ class Form extends MY_Controller
 
 	public function del($id)
 	{
-		
+
 	}
 }
