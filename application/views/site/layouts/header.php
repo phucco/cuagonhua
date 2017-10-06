@@ -30,23 +30,18 @@
                     <div class="wrapper">
                         <ul>
                             <li>
-                            	<a href="index.html">Trang Chủ</a>
-                        	</li>
-                            <li>
-                        		<a href="gioi-thieu.html">Giới Thiệu</a>
+                        		<a href="#">Giới Thiệu</a>
                     		</li>
                             <li>
-                            	<a href="san-pham.html">Sản Phẩm</a>
+                            	<a href="<?php echo base_url('san-pham/'); ?>">Sản Phẩm</a>
+                        	</li>
+                            
+                            <li>
+                            	<a href="<?php echo base_url('lien-he/'); ?>">Liên hệ</a>
                         	</li>
                             <li>
-                            	<a href="tin-tuc-su-kien.html">Tin tức & Sự kiện</a>
-                        	</li>
-                            <li>
-                            	<a href="gallery.html">Gallery</a>
-                        	</li>
-                            <li>
-                            	<a href="lien-he.html">Liên hệ</a>
-                        	</li>
+                                <a href="<?php echo base_url('gallery/'); ?>">Thư viện ảnh</a>
+                            </li>
                             <li class="hotline">
                                 <img src="<?php echo site_assets(); ?>assets/css/images/hotline.png" alt="HotLine">
                             </li>

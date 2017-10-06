@@ -2,8 +2,7 @@
     <div class="wrapper">
 
         <div class="left">
-            <a href="quy-trinh-san-xuat.html">Quy trình sản xuất</a>
-            <a href="nhan-xet-khach-hang.html">Nhận xét của khách hàng</a>
+            <a href="#"></a>
         </div>
 
         <div class="right">
@@ -15,7 +14,7 @@
         </div>
 
         <div class="text-centered">
-            <span>Ding Tea</span> <small>All rights reserved by dingtea.vn</small>
+            <span>Cửa gỗ nhựa</span> <small>2017</small>
         </div>
         
     </div>
