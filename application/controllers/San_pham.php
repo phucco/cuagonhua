@@ -27,6 +27,28 @@ class San_pham extends MY_Controller
 
 	public function show($slug)
 	{
-		
+		pre($this->get_product_from_slug($slug));
+
+	}
+
+	protected function get_product_from_slug($slug)
+	{
+		$slug = strval($slug);
+		if ( empty($slug) ) return FALSE;
+
+		$input = array();
+		$input['where'] = array('slug' => $slug);
+		$product = $this->product_model->get_row($input);
+
+		if ( empty($product) ) 
+		{
+			$input['where'] = array();
+			$input['like'] = array('slug', $slug);
+			$product = $this->product_model->get_row($input);
+		}
+
+		if ( empty($product) ) return FALSE;
+
+		return $product;
 	}
 }
