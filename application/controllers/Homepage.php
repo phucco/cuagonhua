@@ -15,7 +15,7 @@ class Homepage extends MY_Controller
 
 	public function index()
 	{
-		$this->data['temp'] = 'site/lien_he/form';
-		$this->load->view('site/layouts/index', $this->data);
+		//$this->data['temp'] = 'site/lien_he/form';
+		$this->load->view('site/homepage/index', $this->data);
 	}
 }

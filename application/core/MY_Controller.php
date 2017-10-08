@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller
 		'extra_js' => array(),
 		'write_js' => '',
 		'temp' => 'admin/layouts/blank',
-		'sidebar' => 'lien_he/sidebar-1',
+		'sidebar' => 'site/layouts/sidebar-1',
 		'subnav' => 'layouts/subnav',
 		'small_content_header' => ''
 	);

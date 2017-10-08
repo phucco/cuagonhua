@@ -60,7 +60,7 @@ class Lien_he extends MY_Controller
 
 		}
 
-		$this->data['sidebar'] = 'site/lien_he/sidebar-1';
+		$this->data['sidebar'] = 'site/layouts/sidebar-1';
 		$this->data['temp'] = 'site/lien_he/form';
 		$this->load->view('site/layouts/index', $this->data);
 	}

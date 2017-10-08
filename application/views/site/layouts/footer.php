@@ -2,7 +2,7 @@
     <div class="wrapper">
 
         <div class="left">
-            <a href="#"></a>
+            <a href="javascript:void();"><span>Copyright 2017</span></a>
         </div>
 
         <div class="right">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="text-centered">
-            <span>Cửa gỗ nhựa</span> <small>2017</small>
+            <span>Cửa gỗ nhựa</span> 
         </div>
         
     </div>
