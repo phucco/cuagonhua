@@ -12,9 +12,7 @@
                     </div>
                     <div class="form-group">
                         <label for="image">Chọn ảnh tải lên</label>
-                        <?php echo form_error('image'); ?>
                         <input type="file" id="image" name="image" class="form-control">
-                        <p class="help-block"><?php echo (isset($upload_error)) ? $upload_error : ''; ?></p>
                     </div>
                 </div>
                 <div class="box-footer">

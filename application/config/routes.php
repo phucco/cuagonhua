@@ -55,5 +55,9 @@ $route['admin'] = 'admin/dashboard';
 
 $route['logout'] = 'login/destroy';
 
+$route['danh-muc/(:any)'] = 'san_pham/danh_muc/$1';
+
+$route['san-pham/(:any)'] = 'san_pham/show/$1';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;

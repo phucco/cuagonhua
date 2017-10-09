@@ -27,11 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="image">Tải lên ảnh xem trước</label>
-                        <?php echo ( ! empty($upload_error) ) ? $upload_error : ''; ?>
-                        <div class="btn btn-success btn-file">
-                            <i class="fa fa-paperclip"></i> Chọn file tải lên
-                            <input type="file" name="image">
-                        </div>
+                        <input type="file" id="image" name="image" class="form-control">
                     </div>
                 </div>
             </div>

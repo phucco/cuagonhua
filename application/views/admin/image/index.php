@@ -3,7 +3,7 @@
       	<div class="box">
             <div class="box-header">
               	<h3 class="box-title">Có <?php echo $total; ?> ảnh trong thư viện</h3>
-           
+
             </div>
             <div class="box-body table-responsive no-padding">
               	<table class="table table-hover table-center">

@@ -2,17 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
-* 
+*
 */
 class Product extends MY_Controller
 {
-	
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('product_model');
 		$this->load->model('category_model');
-
 	}
 
 	public function index()
@@ -62,25 +60,57 @@ class Product extends MY_Controller
 				$short_description = $this->input->post('short_description');
 				$long_description = $this->input->post('long_description');
 
-				$insertdata = array(
-					'name' => $name,
-					'slug' => $slug,
-					'category_id' => $category_id,
-					'short_description' => $short_description,
-					'long_description' => $long_description,
-					'created_at' => date('Y-m-d H:i:s')
-				);
+				$config = array();
+				$config['upload_path'] = 'upload/product';
+				$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
+				$this->load->library('upload', $config);
 
-
-				if ($this->product_model->create($insertdata))
+				if($this->upload->do_upload('image'))
 				{
-					$this->session->mess('Tạo sản phẩm thành công.', 'success');
-					redirect(base_url('admin/product/'),'refresh');
+					$upload_data = $this->upload->data();
+
+					$insertdata = array(
+						'name' => $name,
+						'slug' => $slug,
+						'image' => $upload_data['file_name'],
+						'category_id' => $category_id,
+						'short_description' => $short_description,
+						'long_description' => $long_description,
+						'created_at' => date('Y-m-d H:i:s')
+					);
+
+					if ($this->product_model->create($insertdata))
+					{
+						$this->session->mess('Tạo sản phẩm thành công.', 'success');
+						redirect(base_url('admin/product/'),'refresh');
+					}
+					else
+					{
+						$this->session->mess('Tạo sản phẩm không thành công.', 'danger');
+						redirect(base_url('admin/product/'),'refresh');
+					}
 				}
 				else
 				{
-					$this->session->mess('Tạo sản phẩm không thành công.', 'danger');
-					redirect(base_url('admin/product/'),'refresh');
+					$insertdata = array(
+						'name' => $name,
+						'slug' => $slug,
+						'category_id' => $category_id,
+						'short_description' => $short_description,
+						'long_description' => $long_description,
+						'created_at' => date('Y-m-d H:i:s')
+					);
+
+					if ($this->product_model->create($insertdata))
+					{
+						$this->session->mess('Tạo sản phẩm thành công.', 'success');
+						redirect(base_url('admin/product/'),'refresh');
+					}
+					else
+					{
+						$this->session->mess('Tạo sản phẩm không thành công.', 'danger');
+						redirect(base_url('admin/product/'),'refresh');
+					}
 				}
 			}
 		}
@@ -94,14 +124,14 @@ class Product extends MY_Controller
 	public function edit($id)
 	{
 		$id = intval($id);
-		$product = $this->product_model->get_info($id);		
+		$product = $this->product_model->get_info($id);
 
 		if ( empty($product) )
 		{
 			$this->session->mess('Sản phẩm không tồn tại.', 'danger');
 			redirect(base_url('admin/product/'),'refresh');
 		}
-		
+
 		$this->data['product'] = $product;
 
 		$this->load->helper('form');
@@ -161,7 +191,7 @@ class Product extends MY_Controller
 	public function del($id)
 	{
 		$id = intval($id);
-		$product = $this->product_model->get_info($id);		
+		$product = $this->product_model->get_info($id);
 
 		if ( empty($product) )
 		{

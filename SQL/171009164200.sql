@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2017 at 01:56 AM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- Generation Time: Oct 09, 2017 at 11:42 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -122,7 +122,8 @@ INSERT INTO `tlpv_login` (`id`, `token`, `created_at`, `expired_at`, `data`) VAL
 (52, '4d6ed41c862f2b91ba0ae429fbb500db', '2017-10-04 12:40:22', '2017-10-04 16:40:22', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'),
 (53, '4196bf40935854a4d75c6ddf1a2bb7a6', '2017-10-05 01:36:27', '2017-10-05 05:36:27', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'),
 (54, '224586538e43f86b0bce8ed51244d02a', '2017-10-07 23:13:59', '2017-10-08 03:13:59', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'),
-(55, 'f99c45f37bd18c91157e0e1d9f9f0dc8', '2017-10-08 19:00:59', '2017-10-08 23:00:59', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
+(55, 'f99c45f37bd18c91157e0e1d9f9f0dc8', '2017-10-08 19:00:59', '2017-10-08 23:00:59', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'),
+(56, '27de5a5cd3e767c9c319f9b4127f11e1', '2017-10-09 09:15:42', '2017-10-09 13:15:42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -153,7 +154,8 @@ INSERT INTO `tlpv_product` (`id`, `category_id`, `name`, `slug`, `image`, `image
 (2, 1, 'Cửa gỗ Tàu 2', 'cua-go-tau-2', '704852-478e0d1185ed730fc41b874b00066270.jpg', 'link.jpg, link2.png', 0, 'Cửa dễ hỏng', 'Mô tả dài cửa gỗ Tàu', '2017-09-28 08:00:00', '2017-10-01 18:18:30'),
 (3, 1, 'cửa tàu', 'cua-tau', '704852-478e0d1185ed730fc41b874b00066270.jpg', NULL, 0, 'gsergowerij', 'weorvweovnw erwergweornvwergjwoerjwervsdnflksefg ưer', '2017-10-01 19:53:51', '2017-10-01 19:57:31'),
 (5, 1, 'Cửa gỗ Tàu 2', 'cua-go-tau-2', '704852-478e0d1185ed730fc41b874b00066270.jpg', 'link.jpg, link2.png', 0, 'Cửa dễ hỏng', 'Mô tả dài cửa gỗ Tàu', '2017-09-28 08:00:00', '2017-10-01 18:18:30'),
-(6, 1, 'Cửa gỗ Tàu 2', 'cua-go-tau-2', '704852-478e0d1185ed730fc41b874b00066270.jpg', 'link.jpg, link2.png', 0, 'Cửa dễ hỏng', 'Mô tả dài cửa gỗ Tàu', '2017-09-28 08:00:00', '2017-10-01 18:18:30');
+(6, 1, 'Cửa gỗ Tàu 2', 'cua-go-tau-2', '704852-478e0d1185ed730fc41b874b00066270.jpg', 'link.jpg, link2.png', 0, 'Cửa dễ hỏng', 'Mô tả dài cửa gỗ Tàu', '2017-09-28 08:00:00', '2017-10-01 18:18:30'),
+(8, 8, 'sản phẩm', 'san-pham', '284aa852e843d836668476df306d5676.jpg', NULL, 0, 'ngắn', 'dài', '2017-10-09 09:19:03', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -234,12 +236,12 @@ ALTER TABLE `tlpv_image`
 -- AUTO_INCREMENT for table `tlpv_login`
 --
 ALTER TABLE `tlpv_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `tlpv_product`
 --
 ALTER TABLE `tlpv_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
