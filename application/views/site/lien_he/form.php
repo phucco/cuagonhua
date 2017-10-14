@@ -2,7 +2,7 @@
     <div id="contact">
         <div class="text-centered title-heart">
             <h1>
-                Liên hệ <span>Ding Tea</span>
+                Liên hệ <span>Cửa gỗ nhựa Hoàng Hải</span>
             </h1>
             <div class="traitim">
                 <span class="heart">

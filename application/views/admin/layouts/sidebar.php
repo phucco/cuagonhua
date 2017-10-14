@@ -1,7 +1,5 @@
-<aside class="main-sidebar" style="position: fixed;">
-    <!-- sidebar: style can be found in sidebar.less -->
+<aside class="main-sidebar">
     <section class="sidebar">
-        <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li>
                 <a href="<?php echo base_url('/admin/product/'); ?>"><i class="fa fa-trophy"></i><span> Sản phẩm</span></a>
@@ -16,10 +14,7 @@
                 <a href="<?php echo base_url('/admin/form/'); ?>"><i class="fa fa-comments-o"></i><span> Yêu cầu</span></a>
             </li>
             <li>
-                <a href="<?php echo base_url('/user/edit/'); ?>"><i class="fa fa-lock"></i><span> Đổi mật khẩu</span></a>
-            </li>
-            <li>
-                <a href="<?php echo base_url('/LINH/'); ?>"><i class="fa fa-pen"></i><span> lINH</span></a>
+                <a href="<?php echo base_url('admin/user/edit/'); ?>"><i class="fa fa-lock"></i><span> Đổi mật khẩu</span></a>
             </li>
         </ul>
     </section>

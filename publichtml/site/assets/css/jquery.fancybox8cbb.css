@@ -94,14 +94,14 @@
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url(http://www.dingtea.vn/assets/css/images/fancybox_loading.gif) center center no-repeat;
+	background: url(images/fancybox_loading.gif) center center no-repeat;
 }
 
 .fancybox-close {
 	position: absolute;
 	top: -17px;
 	right: -17px;
-	background:url(http://www.dingtea.vn/assets/css/images/close.png) 50% 50% no-repeat !important;
+	background:url(images/close.png) 50% 50% no-repeat !important;
 	width: 34px;
 	height: 34px;
 	cursor: pointer;
@@ -115,7 +115,7 @@
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url(http://www.dingtea.vn/assets/css/images/blank.gif); /* helps IE */
+	background: transparent url(images/blank.gif); /* helps IE */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	z-index: 8040;
 }
@@ -141,12 +141,12 @@
 
 .fancybox-prev span {
 	left: 10px;
-	background:url(http://www.dingtea.vn/assets/css/images/prew.png) no-repeat 50% 50% !important;
+	background:url(images/prew.png) no-repeat 50% 50% !important;
 }
 
 .fancybox-next span {
 	right: 10px;
-	background:url(http://www.dingtea.vn/assets/css/images/next.png) no-repeat 50% 50% !important;
+	background:url(images/next.png) no-repeat 50% 50% !important;
 }
 
 .fancybox-nav:hover span {
@@ -185,7 +185,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background:url(http://www.dingtea.vn/assets/css/images/fancybox_overlay.png);
+	background:url(images/fancybox_overlay.png);
 }
 
 .fancybox-overlay-fixed {
@@ -203,7 +203,7 @@
 
 .fancybox-title {
 	visibility: hidden;
-	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: normal 13px/20px "Open Sans",Helvetica,Arial,sans-serif;
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
@@ -264,12 +264,12 @@
 	   only screen and (min-device-pixel-ratio: 1.5){
 
 	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url(http://www.dingtea.vn/assets/css/images/fancybox_sprite@2x.png);
+		background-image: url(images/fancybox_sprite@2x.png);
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 
 	#fancybox-loading div {
-		background-image: url(http://www.dingtea.vn/assets/css/images/fancybox_loading@2x.gif);
+		background-image: url(images/fancybox_loading@2x.gif);
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 }

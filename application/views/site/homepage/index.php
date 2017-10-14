@@ -18,6 +18,11 @@
     <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.maximage.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=vietnamese" rel="stylesheet">
+
     <script type="text/javascript">
         $(function () {
             $('#maximage').maximage({
@@ -57,9 +62,9 @@
         <?php $this->load->view('site/layouts/header', $this->data); ?> 
 
 
-        <div class="slogan">
+        <!-- <div class="slogan">
             <img src="<?php echo site_assets(); ?>assets/css/images/slogan.png">
-        </div>
+        </div> -->
 
         <?php $this->load->view('site/layouts/footer', $this->data); ?>
 
@@ -78,5 +83,4 @@
     </div>
 
 </body>
-
 </html>

@@ -13,6 +13,7 @@ class MY_Controller extends CI_Controller
 		'write_js' => '',
 		'temp' => 'admin/layouts/blank',
 		'sidebar' => 'site/layouts/sidebar-1',
+		'breadcrumbs' => 'site/lien_he/breadcrumbs',
 		'subnav' => 'layouts/subnav',
 		'small_content_header' => ''
 	);
@@ -30,7 +31,20 @@ class MY_Controller extends CI_Controller
 				break;
 			
 			default:
-				
+				$this->load->model('category_model');
+
+				$list_category_menu = $this->category_model->get_list(array(array('id', 'ASC')));
+
+				foreach ($list_category_menu as $category) {
+					unset($category->parent_id);
+					unset($category->short_description);
+					unset($category->long_description);
+					unset($category->created_at);
+					unset($category->updated_at);
+				}
+
+				$this->data['list_category_menu'] = $list_category_menu;
+
 				break;
 		}
 

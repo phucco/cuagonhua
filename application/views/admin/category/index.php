@@ -3,16 +3,6 @@
       	<div class="box">
             <div class="box-header">
               	<h3 class="box-title">Có <?php echo $total; ?> danh mục sản phẩm</h3>
-<!--
-              	<div class="box-tools">
-	                <ul class="pagination pagination-sm no-margin pull-right">
-	                  	<li><a href="#">&laquo;</a></li>
-	                  	<li><a href="#">1</a></li>
-	                  	<li><a href="#">2</a></li>
-	                  	<li><a href="#">3</a></li>
-	                  	<li><a href="#">&raquo;</a></li>
-	                </ul>
-              	</div> -->
             </div>
             <div class="box-body table-responsive no-padding">
               	<table class="table table-hover table-center">
@@ -20,7 +10,8 @@
 						<th class="col-md-1">ID</th>
 						<th class="col-md-2">Tên danh mục</th>
 						<th class="col-md-2">Danh mục lớn</th>
-						<th class="col-md-2">Mô tả</th>
+						<th class="col-md-1">Mô tả ngắn</th>
+						<th class="col-md-3">Mô tả dài</th>
 						<th class="col-md-2">Hành động</th>
 					</thead>
 					<tbody>
@@ -30,6 +21,7 @@
 								<td><?php if ($row->parent_id == '0') { echo '<strong>' . $row->name . '</strong>'; } else { echo $row->name; } ?></td>
 								<td><?php echo $row->parent_name;?></td>
 								<td><?php echo $row->short_description;?></td>
+								<td><?php echo $row->long_description;?></td>
 								<td>
 	                                <a href="<?php echo base_url('danh-muc/' . $row->slug); ?>" class="btn btn-success" title="Xem" target="_blank">
 	                                    <i class="fa fa-caret-square-o-right"></i>

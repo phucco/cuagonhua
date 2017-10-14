@@ -18,3 +18,6 @@
 <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.maximage.js"></script>
 <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/Function.js"></script>
 <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/main.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=vietnamese" rel="stylesheet">

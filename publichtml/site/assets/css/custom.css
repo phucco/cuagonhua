@@ -1,7 +1,91 @@
+/* General */
+
 span.red {
 	color: red;
 }
 
+.title-heart h1, h1.inner-title {
+	font-family: 'Roboto Slab', serif;
+}
+
+.title-heart h1 a {
+	color: #42210b;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.category-name {
+	color: #A67C52;
+}
+
+/* Grid */
+
+
+/* Footer */
+
 #footer .text-centered span {
 	padding-top: 12px;
+}
+
+#footer .wrapper .text-centered span {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.5em;
+}
+
+img.logo-circle {
+	width: 176px;
+	height: auto;
+	border: 2px solid #111111;
+	border-radius: 88px;
+	-moz-border-radius: 88px;
+	-webkit-border-radius: 88px;
+	background: white;
+}
+
+
+/* Header */
+
+.nav-intro ul li a {
+	font-weight: bold;
+}
+
+.menutop {
+	right: 65px;
+}
+
+.menutop ul li a {
+	font-weight: bold;
+}
+
+#banner img {
+	border-width: 0px;
+}
+
+
+/* Sidebar */
+
+li.big-menu {
+	text-transform: uppercase;
+}
+
+li.small-menu {
+	padding-left: 15px;
+}
+
+/* Linh tinh */
+
+.gallery .fancybox {
+    width: 128px;
+    height: 72px;
+    border: 1px solid #cc9a5c;
+    display: block;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.gallery .fancybox:hover {
+    border-color: #2b2120;
 }

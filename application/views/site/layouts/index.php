@@ -11,17 +11,17 @@
     	<div id="innerpage">
 
 			<div id="banner">
-			    <img src="<?php echo site_assets(); ?>DataUpload/Banner/1115121115bn2.jpg" style="border-width:0px;" />
+			    <img src="<?php echo base_url(); ?>upload/slide/3.jpg" /><!-- 
 			    <div class="slogan">
 			        <img src="<?php echo site_assets(); ?>assets/css/images/slogan.png">
-			    </div>
+			    </div> -->
 			</div>
     
 			<?php $this->load->view('site/layouts/header', $this->data); ?> 
 
 	        <div id="main">
 
-	        	<?php $this->load->view('site/layouts/breadcrumbs', $this->data); ?>
+	        	<?php $this->load->view($breadcrumbs, $this->data); ?>
 			
 				<div class="clear"></div>
 

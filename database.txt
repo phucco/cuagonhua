@@ -1,4 +1,0 @@
-Database:	cuagonhu_linhyeucun
-Host:	localhost
-Username:	cuagonhu_linh
-Password:	thuylinhphamvu@3009

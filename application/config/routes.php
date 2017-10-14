@@ -59,5 +59,7 @@ $route['danh-muc/(:any)'] = 'san_pham/danh_muc/$1';
 
 $route['san-pham/(:any)'] = 'san_pham/show/$1';
 
+$route['thu-vien-anh'] = 'gallery';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;

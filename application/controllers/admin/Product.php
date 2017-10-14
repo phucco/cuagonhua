@@ -16,6 +16,7 @@ class Product extends MY_Controller
 	public function index()
 	{
 		$input = array();
+		$input['order'] = array('order_num', 'ASC');
 		$total = $this->product_model->get_total($input);
 		$this->data['total'] = $total;
 
@@ -26,6 +27,28 @@ class Product extends MY_Controller
 		}
 
 		$this->data['list'] = $list;
+
+		$write_js = '
+			$(".order-num-col").click(function(){
+				$(this).children().show();
+				var id = $(this).attr("id").replace("order-num-col-", "");
+
+				$("input[name=\'order_num_" + id + "\']").change(function(){
+
+					var order_num = $(this).val();
+
+					$.get({
+						url: "' . base_url('admin/product/order/?id=') . '" + id + "&order_num=" + order_num,
+						success: function(){
+							$("#order-num-col-" + id).text(order_num);
+							$("#order-form-" + id).remove();
+						}
+					});
+				});
+			});
+		';
+
+		$this->data['write_js'] = htmlspecialchars($write_js);
 
 		$this->data['subnav'] = 'admin/product/subnav';
 		$this->data['small_content_header'] = 'Tất cả sản phẩm';
@@ -159,25 +182,57 @@ class Product extends MY_Controller
 				$short_description = $this->input->post('short_description');
 				$long_description = $this->input->post('long_description');
 
-				$insertdata = array(
-					'name' => $name,
-					'slug' => $slug,
-					'category_id' => $category_id,
-					'short_description' => $short_description,
-					'long_description' => $long_description,
-					'updated_at' => date('Y-m-d H:i:s')
-				);
+				$config = array();
+				$config['upload_path'] = 'upload/product';
+				$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
+				$this->load->library('upload', $config);
 
-
-				if ($this->product_model->update($id, $insertdata))
+				if($this->upload->do_upload('image'))
 				{
-					$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' thành công.', 'success');
-					redirect(base_url('admin/product/'),'refresh');
+					$upload_data = $this->upload->data();
+
+					$insertdata = array(
+						'name' => $name,
+						'slug' => $slug,
+						'image' => $upload_data['file_name'],
+						'category_id' => $category_id,
+						'short_description' => $short_description,
+						'long_description' => $long_description,
+						'updated_at' => date('Y-m-d H:i:s')
+					);
+
+					if ($this->product_model->update($id, $insertdata))
+					{
+						$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' thành công.', 'success');
+						redirect(base_url('admin/product/'),'refresh');
+					}
+					else
+					{
+						$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' không thành công.', 'danger');
+						redirect(base_url('admin/product/'),'refresh');
+					}
 				}
 				else
 				{
-					$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' không thành công.', 'danger');
-					redirect(base_url('admin/product/'),'refresh');
+					$insertdata = array(
+						'name' => $name,
+						'slug' => $slug,
+						'category_id' => $category_id,
+						'short_description' => $short_description,
+						'long_description' => $long_description,
+						'updated_at' => date('Y-m-d H:i:s')
+					);
+
+					if ($this->product_model->update($id, $insertdata))
+					{
+						$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' thành công.', 'success');
+						redirect(base_url('admin/product/'),'refresh');
+					}
+					else
+					{
+						$this->session->mess('Sửa sản phẩm có ID = ' . $id . ' không thành công.', 'danger');
+						redirect(base_url('admin/product/'),'refresh');
+					}
 				}
 			}
 		}
@@ -209,6 +264,20 @@ class Product extends MY_Controller
 			$this->session->mess('Xóa sản phẩm có ID = ' . $id . ' không thành công.', 'danger');
 			redirect(base_url('admin/product/'),'refresh');
 		}
+	}
+
+	public function order()
+	{
+			$id = $this->input->get('id');
+			$order_num = $this->input->get('order_num');
+
+			$insertdata = array(
+				'order_num' => $order_num,
+				'updated_at' => date('Y-m-d H:i:s')
+				);
+
+			$this->product_model->update($id, $insertdata);
+		
 	}
 
 	protected function category_id_to_name($id)

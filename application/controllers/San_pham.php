@@ -11,7 +11,6 @@ class San_pham extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model('product_model');
-		$this->load->model('category_model');
 	}
 
 	public function index()
@@ -24,11 +23,15 @@ class San_pham extends MY_Controller
 		foreach ($list_category as $category) {			
 				$input['where'] = array('parent_id' => $category->id);
 				$category->list_sub_category = $this->category_model->get_list($input);
-			
+
+				$input = array();
+				$input['where'] = array('category_id' => $category->id);
+				$category->list_product = $this->product_model->get_list($input);			
 		}
 
 		$this->data['list_category'] = $list_category;
 
+		$this->data['breadcrumbs'] = 'site/product/breadcrumbs-0';
 		$this->data['sidebar'] = 'site/layouts/sidebar-1';
 		$this->data['temp'] = 'site/product/index';
 		$this->load->view('site/layouts/index', $this->data);
@@ -39,6 +42,7 @@ class San_pham extends MY_Controller
 		$category_id = $this->get_category_id_from_slug($slug);
 
 		if ( empty($category_id) ) redirect(base_url());
+		
 
 		$category = $this->category_model->get_info($category_id);
 
@@ -49,10 +53,11 @@ class San_pham extends MY_Controller
 		$input['where'] = array('category_id' => $category_id);
 		$list = $this->product_model->get_list($input);
 
-		if ( empty($list) ) redirect(base_url());
+		//if ( empty($list) ) redirect(base_url());
 
 		$this->data['list'] = $list;
 
+		$this->data['breadcrumbs'] = 'site/product/breadcrumbs-1';
 		$this->data['sidebar'] = 'site/layouts/sidebar-1';
 		$this->data['temp'] = 'site/product/category';
 		$this->load->view('site/layouts/index', $this->data);
@@ -64,8 +69,11 @@ class San_pham extends MY_Controller
 
 		if ( empty($product) ) redirect(base_url());
 
+		$product->category = $this->get_category_from_id($product->category_id);
+
 		$this->data['product'] = $product;
 
+		$this->data['breadcrumbs'] = 'site/product/breadcrumbs-2';
 		$this->data['sidebar'] = 'site/layouts/sidebar-1';
 		$this->data['temp'] = 'site/product/show';
 		$this->load->view('site/layouts/index', $this->data);
@@ -111,5 +119,29 @@ class San_pham extends MY_Controller
 		if ( empty($category) ) return FALSE;
 
 		return $category->id;
+	}
+
+	protected function get_category_name_from_id($id)
+	{
+		$id = intval($id);
+		if ( empty($id) ) return FALSE;
+
+		$category = $this->category_model->get_info($id);
+
+		if ( empty($category) ) return FALSE;
+
+		return $category->name;
+	}
+
+	protected function get_category_from_id($id)
+	{
+		$id = intval($id);
+		if ( empty($id) ) return FALSE;
+
+		$category = $this->category_model->get_info($id);
+
+		if ( empty($category) ) return FALSE;
+
+		return $category;
 	}
 }

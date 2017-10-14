@@ -5,3 +5,11 @@
 .text-bold {
 	font-weight: bold;
 }
+
+.text-highlight {
+	font-size: 1.25em;
+}
+
+aside.main-sidebar {
+	position: fixed;
+}
