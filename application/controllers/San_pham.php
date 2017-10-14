@@ -57,6 +57,9 @@ class San_pham extends MY_Controller
 
 		$this->data['list'] = $list;
 
+		// $this->data['extra_css'] = array('assets/css/pgwslideshow.min.css', 'assets/css/pgwslideshow_light.min.css');
+		// $this->data['extra_js'] = array('assets/js/pgwslideshow.min.js');
+
 		$this->data['breadcrumbs'] = 'site/product/breadcrumbs-1';
 		$this->data['sidebar'] = 'site/layouts/sidebar-1';
 		$this->data['temp'] = 'site/product/category';

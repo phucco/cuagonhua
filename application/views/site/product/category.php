@@ -9,13 +9,8 @@
                     <img src="<?php echo site_assets(); ?>assets/css/images/heat.png"></span>
             </div>
         </div>
-        <link rel="stylesheet" type="text/css" href="<?php echo site_assets(); ?>assets/css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo site_assets(); ?>assets/css/slick-theme.css"/>
-<script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/slick.min.js"></script>
-<script type="text/javascript">
-    $('.blocks-4').slick({
-  });
-</script>
+
+
         <ul class="blocks-4">
             
             <?php foreach ($list as $row) : ?>
@@ -28,7 +23,8 @@
                 </li>
 
             <?php endforeach; ?>
-            
         </ul>
+
+
     </div>
 </div>

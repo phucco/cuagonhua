@@ -21,7 +21,9 @@ body {
 }
 
 /* Grid */
-
+.gallery {
+	overflow: hidden;
+}
 
 /* Footer */
 
@@ -77,8 +79,7 @@ li.small-menu {
 /* Linh tinh */
 
 .gallery .fancybox {
-    width: 128px;
-    height: 72px;
+    width: 256px;
     border: 1px solid #cc9a5c;
     display: block;
     float: left;

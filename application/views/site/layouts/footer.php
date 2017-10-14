@@ -14,7 +14,7 @@
         </div>
 
         <div class="text-centered">
-            <span>Cửa gỗ nhựa</span> 
+            <span>Cửa gỗ nhựa Hoàng Hải</span> 
         </div>
         
     </div>

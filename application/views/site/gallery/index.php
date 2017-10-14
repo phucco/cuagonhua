@@ -1,8 +1,3 @@
-<script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.fancybox8cbb.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo site_assets(); ?>assets/css/jquery.fancybox8cbb.css?v=2.1.5"
-    media="screen" />
-
-
 <div class="col-beta">
     <div class="gallery">
         <div class="text-centered title-heart">
@@ -32,7 +27,6 @@
                 nextClick: true
             });
         </script>
-
 
     </div>
 </div>

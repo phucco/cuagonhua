@@ -19,6 +19,9 @@ class Gallery extends MY_Controller
 
 		$this->data['list'] = $list;
 
+		$this->data['extra_css'] = array('assets/css/jquery.fancybox8cbb.css');
+		$this->data['extra_js'] = array('assets/js/jquery.fancybox8cbb.js');
+
 		$this->data['breadcrumbs'] = 'site/gallery/breadcrumbs';
 		$this->data['temp'] = 'site/gallery/index';
 		$this->load->view('site/layouts/index', $this->data);
