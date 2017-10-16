@@ -57,8 +57,11 @@ class San_pham extends MY_Controller
 
 		$this->data['list'] = $list;
 
-		// $this->data['extra_css'] = array('assets/css/pgwslideshow.min.css', 'assets/css/pgwslideshow_light.min.css');
-		// $this->data['extra_js'] = array('assets/js/pgwslideshow.min.js');
+		// $this->data['extra_css'] = array('assets/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css', 'assets/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css');
+		// $this->data['extra_js'] = array('assets/OwlCarousel2-2.2.1/dist/owl.carousel.min.js');
+
+		$this->data['extra_css'] = array('assets/css/flickity.min.css');
+		$this->data['extra_js'] = array('assets/js/flickity.pkgd.min.js');
 
 		$this->data['breadcrumbs'] = 'site/product/breadcrumbs-1';
 		$this->data['sidebar'] = 'site/layouts/sidebar-1';

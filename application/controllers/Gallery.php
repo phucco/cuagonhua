@@ -19,6 +19,15 @@ class Gallery extends MY_Controller
 
 		$this->data['list'] = $list;
 
+		$write_js = '$(".fancybox").fancybox({
+                openEffect  : "none",
+                closeEffect : "none",
+                closeBtn: true,
+                arrows: true,
+                nextClick: true
+            });';
+
+        $this->data['write_js'] = htmlspecialchars($write_js);
 		$this->data['extra_css'] = array('assets/css/jquery.fancybox8cbb.css');
 		$this->data['extra_js'] = array('assets/js/jquery.fancybox8cbb.js');
 

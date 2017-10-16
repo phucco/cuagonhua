@@ -1,15 +1,10 @@
  <div id="maximage">
 
     <div class="first-image">
-        <img src="<?php echo base_url(); ?>upload/slide/1.jpg" alt="Slide Cửa gỗ nhựa Hoàng Hải 1" />
+        <img src="<?php echo base_url(); ?>upload/slide/4.png" alt="Slide Cửa gỗ nhựa Hoàng Hải 1" />
     </div>
 
     <div class="first-image">
-        <img src="<?php echo base_url(); ?>upload/slide/2.jpg" alt="Slide Cửa gỗ nhựa Hoàng Hải 2" />
+        <img src="<?php echo base_url(); ?>upload/slide/5.png" alt="Slide Cửa gỗ nhựa Hoàng Hải 2" />
     </div>
-
-    <div class="first-image">
-        <img src="<?php echo base_url(); ?>upload/slide/3.jpg" alt="Slide Cửa gỗ nhựa Hoàng Hải 3" />
-    </div>
-
 </div>

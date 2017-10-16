@@ -25,6 +25,19 @@ body {
 	overflow: hidden;
 }
 
+#maximage {
+	top: 60px;
+}
+
+#banner {
+	top: 60px;
+}
+
+#main {
+	margin-top: 60px;
+}
+
+
 /* Footer */
 
 #footer .text-centered span {
@@ -89,4 +102,15 @@ li.small-menu {
 
 .gallery .fancybox:hover {
     border-color: #2b2120;
+}
+
+
+/* Product */
+.sanpham .fancybox-thumbs {
+	border: none;
+	border-bottom: 3px solid #cc9a5c;
+}
+
+.product-preview {
+	height: 400px;
 }

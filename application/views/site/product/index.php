@@ -13,18 +13,17 @@
         </div>
 
         <ul class="blocks-4">
+
             <?php foreach ($category->list_product as $row) : ?>
 
                 <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" href="<?php echo base_url('san-pham/' . $row->slug); ?>" title="<?php echo 'Xem chi tiết sản phẩm ' . $row->name; ?>">
-                        <img src="<?php echo base_url('upload/product/' . $row->image); ?>" alt="" />
+                    <a class="fancybox-thumbs" href="<?php echo base_url('san-pham/' . $row->slug); ?>" title="<?php echo 'Xem chi tiết sản phẩm ' . $row->name; ?>">
+                        <img src="<?php echo base_url('upload/product/' . $row->image); ?>" class="product-preview"/>
                         <span><font><?php echo $row->name; ?></font></span>
                     </a>
                 </li>
 
             <?php endforeach; ?>
-   
-
             
         </ul>
     </div>

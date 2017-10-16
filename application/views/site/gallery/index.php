@@ -18,15 +18,15 @@
 
         <?php endforeach; ?>
 
-       <script type="text/javascript">
+       <!-- <script type="text/javascript">
             $(".fancybox").fancybox({
-                openEffect  : 'none',
-                closeEffect : 'none',
+                openEffect  : "none",
+                closeEffect : "none",
                 closeBtn: true,
                 arrows: true,
                 nextClick: true
             });
-        </script>
+        </script> -->
 
     </div>
 </div>

@@ -19,3 +19,9 @@
         
     </div>
 </div>
+
+<script type="text/javascript">
+
+    <?php echo htmlspecialchars_decode($write_js); ?>
+
+</script>
