@@ -20,12 +20,14 @@ class San_pham extends MY_Controller
 
 		$list_category = $this->category_model->get_list($input);
 
-		foreach ($list_category as $category) {			
+		foreach ($list_category as $category) {
+				$input = array();			
 				$input['where'] = array('parent_id' => $category->id);
 				$category->list_sub_category = $this->category_model->get_list($input);
 
 				$input = array();
 				$input['where'] = array('category_id' => $category->id);
+				$input['order'] = array('order_num', 'ASC');
 				$category->list_product = $this->product_model->get_list($input);			
 		}
 
@@ -42,7 +44,6 @@ class San_pham extends MY_Controller
 		$category_id = $this->get_category_id_from_slug($slug);
 
 		if ( empty($category_id) ) redirect(base_url());
-		
 
 		$category = $this->category_model->get_info($category_id);
 
@@ -51,14 +52,12 @@ class San_pham extends MY_Controller
 
 		$input = array();
 		$input['where'] = array('category_id' => $category_id);
+		$input['order'] = array('order_num', 'ASC');
 		$list = $this->product_model->get_list($input);
 
 		//if ( empty($list) ) redirect(base_url());
 
 		$this->data['list'] = $list;
-
-		// $this->data['extra_css'] = array('assets/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css', 'assets/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css');
-		// $this->data['extra_js'] = array('assets/OwlCarousel2-2.2.1/dist/owl.carousel.min.js');
 
 		$this->data['extra_css'] = array('assets/css/flickity.min.css');
 		$this->data['extra_js'] = array('assets/js/flickity.pkgd.min.js');

@@ -54,17 +54,12 @@
     </script>
 </head>
 
-<body>        
+<body>
 
     <div id="holder">
-        <?php $this->load->view('site/homepage/slide', $this->data); ?> 
+        <?php $this->load->view('site/homepage/slide', $this->data); ?>
 
-        <?php $this->load->view('site/layouts/header', $this->data); ?> 
-
-
-        <!-- <div class="slogan">
-            <img src="<?php echo site_assets(); ?>assets/css/images/slogan.png">
-        </div> -->
+        <?php $this->load->view('site/layouts/header', $this->data); ?>
 
         <?php $this->load->view('site/layouts/footer', $this->data); ?>
 

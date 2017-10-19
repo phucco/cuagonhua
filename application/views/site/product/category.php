@@ -24,4 +24,8 @@
         </ul>
 
     </div>
+
+    <div class="clear"></div>
+
+    <span>Tổng số có <?php echo count($list); ?> sản phẩm.</span>
 </div>

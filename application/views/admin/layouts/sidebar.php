@@ -14,7 +14,7 @@
                 <a href="<?php echo base_url('/admin/form/'); ?>"><i class="fa fa-comments-o"></i><span> Yêu cầu</span></a>
             </li>
             <li>
-                <a href="<?php echo base_url('admin/user/edit/'); ?>"><i class="fa fa-lock"></i><span> Đổi mật khẩu</span></a>
+                <a href="<?php echo base_url('admin/user/'); ?>"><i class="fa fa-lock"></i><span> Đổi mật khẩu</span></a>
             </li>
         </ul>
     </section>
