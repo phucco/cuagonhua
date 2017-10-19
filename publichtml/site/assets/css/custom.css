@@ -26,7 +26,7 @@ body {
 }
 
 #maximage {
-	top: 20px;
+	top: 60px;
 }
 
 #banner {
@@ -80,6 +80,10 @@ img.logo-circle {
 
 #banner img {
 	border-width: 0px;
+}
+
+.nav-intro .wrapper {
+        padding-left: 464px;
 }
 
 
