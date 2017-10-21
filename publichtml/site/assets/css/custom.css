@@ -83,7 +83,7 @@ img.logo-circle {
 }
 
 .nav-intro .wrapper {
-        padding-left: 464px;
+    padding-left: 350px;
 }
 
 
@@ -121,4 +121,8 @@ li.small-menu {
 
 .product-preview {
 	height: 400px;
+}
+
+.col-beta {
+	min-height: 344px;
 }

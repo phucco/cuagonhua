@@ -10,10 +10,11 @@
 						<th class="col-md-1">STT</th>
 						<th class="col-md-1">Thứ tự</th>
 						<th class="col-md-1">Danh mục</th>
-						<th class="col-md-2">Tên</th>
+						<th class="col-md-1">Tên</th>
 						<th class="col-md-1">Mô tả ngắn</th>
 						<th class="col-md-3">Mô tả dài</th>
 						<th class="col-md-1">Ảnh</th>
+						<th class="col-md-1">Tình trạng hàng</th>
 						<th class="col-md-2">Hành động</th>
 					</thead>
 					<tbody>
@@ -30,6 +31,11 @@
 								<td><?php echo $row->short_description;?></td>
 								<td><?php echo $row->long_description;?></td>
 								<td><img src="<?php echo base_url('upload/product/' . $row->image); ?>" width="100%"></td>
+								<td class="stock-col"><?php echo $row->stock;?>
+									
+										<input type="checkbox" name="" id="stock-form-<?php echo $row->id;?>">
+									
+								</td>
 								<td>
 	                                <a href="<?php echo base_url('san-pham/' . $row->slug); ?>" class="btn btn-success" title="Xem" target="_blank">
 	                                    <i class="fa fa-caret-square-o-right"></i>
