@@ -30,7 +30,7 @@
             </div>
 
             <div class="unit-40 colright2">                
-                <img src="<?php echo base_url('upload/product/' . $product->image); ?>" alt="" />
+                <img src="<?php echo base_url('upload/product/' . $product->image); ?>" alt="<?php echo $product->name; ?>" class="product-preview"/>
             </div>
 
         </div>

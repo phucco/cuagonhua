@@ -7,9 +7,8 @@
             <div class="box-body table-responsive no-padding">
               	<table class="table table-hover table-center">
                 	<thead>
-						<th class="col-md-1">STT</th>
 						<th class="col-md-1">Thứ tự</th>
-						<th class="col-md-1">Danh mục</th>
+						<th class="col-md-2">Danh mục</th>
 						<th class="col-md-1">Tên</th>
 						<th class="col-md-1">Mô tả ngắn</th>
 						<th class="col-md-3">Mô tả dài</th>
@@ -20,7 +19,6 @@
 					<tbody>
 						<?php foreach ($list as $row) : ?>
 							<tr>
-								<td><?php echo $row->id;?></td>
 								<td class="order-num-col" id="order-num-col-<?php echo $row->id;?>"><?php echo $row->order_num;?>
 									<div class="order-form" id="order-form-<?php echo $row->id;?>" style="display: none;">
 										<input type="text" name="order_num_<?php echo $row->id;?>" class="form-control">
@@ -31,10 +29,8 @@
 								<td><?php echo $row->short_description;?></td>
 								<td><?php echo $row->long_description;?></td>
 								<td><img src="<?php echo base_url('upload/product/' . $row->image); ?>" width="100%"></td>
-								<td class="stock-col"><?php echo $row->stock;?>
-									
-										<input type="checkbox" name="" id="stock-form-<?php echo $row->id;?>">
-									
+								<td class="stock-col" id="stock-col-<?php echo $row->id;?>">
+									<input type="checkbox" name="" id="stock-form-<?php echo $row->id;?>" <?php echo ($row->stock == '1') ? 'checked' : '' ; ?>>									
 								</td>
 								<td>
 	                                <a href="<?php echo base_url('san-pham/' . $row->slug); ?>" class="btn btn-success" title="Xem" target="_blank">

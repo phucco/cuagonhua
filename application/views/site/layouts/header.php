@@ -14,7 +14,7 @@
                 <li><a href="<?php echo base_url('san-pham/'); ?>">Tất cả sản phẩm</a></li>
                 <li>|</li>
 
-                <li><a href="<?php echo base_url('lien-he/'); ?>">Gửi báo giá sản phẩm</a></li>
+                <li><a href="<?php echo base_url('lien-he/'); ?>">Liên hệ</a></li>
             </ul>
         </div>
     </div>
@@ -37,9 +37,9 @@
                                 <a href="<?php echo base_url('thu-vien-anh/'); ?>">Thư viện ảnh</a>
                             </li>
                             
-                            <li>
+                            <!-- <li>
                             	<a href="<?php echo base_url('lien-he/'); ?>">Liên hệ</a>
-                        	</li>                            
+                        	</li>  -->                           
                         </ul>
                     </div>
                 </div>
