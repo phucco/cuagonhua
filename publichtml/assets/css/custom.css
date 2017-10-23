@@ -21,6 +21,21 @@ body {
 }
 
 /* Grid */
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+
+#innerpage {
+   min-height: 100%;
+}
+
+#innerpage #footer {
+   bottom: 0;
+}
+
 .gallery {
 	overflow: hidden;
 }
@@ -40,6 +55,10 @@ body {
 #innerpage .colright2 {
 	margin-left: 2%;
     width: 58%;
+}
+
+.col-beta {
+	/*min-height: 344px;*/
 }
 
 /* Footer */
@@ -71,7 +90,7 @@ img.logo-circle {
 }
 
 .menutop {
-	right: 65px;
+	right: 20px;
 }
 
 .menutop ul li a {
@@ -83,7 +102,7 @@ img.logo-circle {
 }
 
 .nav-intro .wrapper {
-    padding-left: 350px;
+    padding-left: 200px;
 }
 
 
@@ -123,6 +142,3 @@ li.small-menu {
 	height: 400px;
 }
 
-.col-beta {
-	min-height: 344px;
-}

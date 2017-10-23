@@ -20,7 +20,7 @@
     </div>
 
     <div id="menu">
-        <img class="img" src="<?php echo site_assets(); ?>assets/css/images/line-mn.png">
+        <img class="img" src="<?php echo base_url(); ?>assets/css/images/line-mn.png">
         <div class="nav-intro">
             <div class="one">
                 <div class="two">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <img class="img" src="<?php echo site_assets(); ?>assets/css/images/line-mn.png">
+        <img class="img" src="<?php echo base_url(); ?>assets/css/images/line-mn.png">
     </div>
     
 </div>

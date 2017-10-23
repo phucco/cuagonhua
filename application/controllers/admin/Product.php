@@ -46,6 +46,18 @@ class Product extends MY_Controller
 					});
 				});
 			});
+			$("input[type=checkbox]").click(function(){
+				var id = $(this).attr("id").replace("stock-checkbox-", "");
+				if ($(this).is(":checked")) {
+					$.get({
+						url: "' . base_url('admin/product/stock/?id=') . '" + id,
+					});
+				} else {
+					$.get({
+						url: "' . base_url('admin/product/unstock/?id=') . '" + id,
+					});
+				}
+			});
 		';
 
 		$this->data['write_js'] = htmlspecialchars($write_js);
@@ -82,6 +94,7 @@ class Product extends MY_Controller
 				$category_id = $this->input->post('category_id');
 				$short_description = $this->input->post('short_description');
 				$long_description = $this->input->post('long_description');
+				$stock = $this->input->post('stock');
 
 				$config = array();
 				$config['upload_path'] = 'upload/product';
@@ -99,6 +112,7 @@ class Product extends MY_Controller
 						'category_id' => $category_id,
 						'short_description' => $short_description,
 						'long_description' => $long_description,
+						'stock' => $stock,
 						'created_at' => date('Y-m-d H:i:s')
 					);
 
@@ -121,6 +135,7 @@ class Product extends MY_Controller
 						'category_id' => $category_id,
 						'short_description' => $short_description,
 						'long_description' => $long_description,
+						'stock' => $stock,
 						'created_at' => date('Y-m-d H:i:s')
 					);
 
@@ -268,16 +283,54 @@ class Product extends MY_Controller
 
 	public function order()
 	{
-			$id = $this->input->get('id');
-			$order_num = $this->input->get('order_num');
+		$id = $this->input->get('id');
+		$id = intval($id);
+		$order_num = $this->input->get('order_num');
 
-			$insertdata = array(
-				'order_num' => $order_num,
-				'updated_at' => date('Y-m-d H:i:s')
-				);
+		$insertdata = array(
+			'order_num' => $order_num,
+			'updated_at' => date('Y-m-d H:i:s')
+			);
 
-			$this->product_model->update($id, $insertdata);
-		
+		$this->product_model->update($id, $insertdata);
+	}
+
+	public function unstock()
+	{
+		$id = $this->input->get('id');
+		$id = intval($id);
+
+		$product = $this->product_model->get_info($id);
+
+		if ( empty($product) ) return FALSE;
+
+		if ( $product->stock == '0' ) return FALSE;
+
+		$insertdata = array(
+			'stock' => '0',
+			'updated_at' => date('Y-m-d H:i:s')
+		);
+
+		$this->product_model->update($id, $insertdata);
+	}
+
+	public function stock()
+	{
+		$id = $this->input->get('id');
+		$id = intval($id);
+
+		$product = $this->product_model->get_info($id);
+
+		if ( empty($product) ) return FALSE;
+
+		if ( $product->stock == '1' ) return FALSE;
+
+		$insertdata = array(
+			'stock' => '1',
+			'updated_at' => date('Y-m-d H:i:s')
+		);
+
+		$this->product_model->update($id, $insertdata);
 	}
 
 	protected function category_id_to_name($id)

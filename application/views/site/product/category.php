@@ -6,7 +6,7 @@
             </h1>
             <div class="traitim">
                 <span class="heart">
-                    <img src="<?php echo site_assets(); ?>assets/css/images/heat.png"></span>
+                    <img src="<?php echo base_url(); ?>assets/css/images/heat.png"></span>
             </div>
         </div>
 

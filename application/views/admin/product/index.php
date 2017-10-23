@@ -30,7 +30,7 @@
 								<td><?php echo $row->long_description;?></td>
 								<td><img src="<?php echo base_url('upload/product/' . $row->image); ?>" width="100%"></td>
 								<td class="stock-col" id="stock-col-<?php echo $row->id;?>">
-									<input type="checkbox" name="" id="stock-form-<?php echo $row->id;?>" <?php echo ($row->stock == '1') ? 'checked' : '' ; ?>>									
+									<input type="checkbox" name="" class="stock-checkbox" id="stock-checkbox-<?php echo $row->id;?>" <?php echo ($row->stock == '1') ? 'checked' : '' ; ?>>									
 								</td>
 								<td>
 	                                <a href="<?php echo base_url('san-pham/' . $row->slug); ?>" class="btn btn-success" title="Xem" target="_blank">

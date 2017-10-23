@@ -9,15 +9,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="<?php echo site_assets(); ?>assets/css/kube.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo site_assets(); ?>assets/css/maxs-slide.css">
-    <link rel="stylesheet" href="<?php echo site_assets(); ?>assets/css/master.css" />
-    <link rel="stylesheet" href="<?php echo site_assets(); ?>assets/css/custom.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/kube.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/maxs-slide.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/master.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css" />
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.cycle.all.js"></script>
-    <script type="text/javascript" src="<?php echo site_assets(); ?>assets/js/jquery.maximage.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.maximage.js"></script>
 
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
@@ -65,10 +65,10 @@
 
         <div id="controls">
             <a href="#" id="arrow_left">
-                <img src="<?php echo site_assets(); ?>assets/css/images/arrow-left.png" alt="Left" />
+                <img src="<?php echo base_url(); ?>assets/css/images/arrow-left.png" alt="Left" />
             </a>
             <a href="#" id="arrow_right">
-                <img src="<?php echo site_assets(); ?>assets/css/images/arrow-right.png" alt="Right" />
+                <img src="<?php echo base_url(); ?>assets/css/images/arrow-right.png" alt="Right" />
             </a>
             <div id="cycle-nav">
                 <ul>

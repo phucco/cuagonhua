@@ -12,15 +12,3 @@ function admin_assets($url = '')
 		return base_url('/ad/' . $url);
 	}
 }
-
-function site_assets($url = '')
-{
-	if (strpos($url, '/') == 0)
-	{
-	 	return base_url('/site/' . substr($url, 1));
-	}
-	else
-	{
-		return base_url('/site/' . $url);
-	}
-}

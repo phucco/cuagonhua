@@ -25,6 +25,12 @@
                             <?php endforeach; ?>
                         </select>
                     </div>
+                    <div class="form-check">
+                        <label class="form-check-label">Tình trạng hàng
+                            <input type="checkbox" class="form-check-input" name="stock" value="1">
+                            <input type="hidden" class="form-check-input" name="stock" value="0">
+                        </label>
+                    </div>
                     <div class="form-group">
                         <label for="image">Tải lên ảnh xem trước</label>
                         <input type="file" id="image" name="image" class="form-control">
