@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">Tình trạng hàng
-                            <input type="checkbox" class="form-check-input" name="stock" value="1">
+                            <input type="checkbox" class="form-check-input" name="stock" value="1" <?php echo (isset($product) && $product->stock == '1') ? 'checked' : ''; ?>>
                             <input type="hidden" class="form-check-input" name="stock" value="0">
                         </label>
                     </div>

@@ -196,6 +196,7 @@ class Product extends MY_Controller
 				$category_id = $this->input->post('category_id');
 				$short_description = $this->input->post('short_description');
 				$long_description = $this->input->post('long_description');
+				$stock = $this->input->post('stock');
 
 				$config = array();
 				$config['upload_path'] = 'upload/product';
@@ -213,6 +214,7 @@ class Product extends MY_Controller
 						'category_id' => $category_id,
 						'short_description' => $short_description,
 						'long_description' => $long_description,
+						'stock' => $stock,
 						'updated_at' => date('Y-m-d H:i:s')
 					);
 
@@ -235,8 +237,9 @@ class Product extends MY_Controller
 						'category_id' => $category_id,
 						'short_description' => $short_description,
 						'long_description' => $long_description,
+						'stock' => $stock,
 						'updated_at' => date('Y-m-d H:i:s')
-					);
+					); pre($insertdata);
 
 					if ($this->product_model->update($id, $insertdata))
 					{
