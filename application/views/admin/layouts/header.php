@@ -25,7 +25,7 @@
               
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="<?php echo base_url('/user/edit/'); ?>" class="btn btn-default btn-flat">Đổi mật khẩu</a>
+                  <a href="<?php echo base_url('/admin/user/'); ?>" class="btn btn-default btn-flat">Đổi mật khẩu</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo base_url('/logout/'); ?>" class="btn btn-default btn-flat">Đăng xuất</a>

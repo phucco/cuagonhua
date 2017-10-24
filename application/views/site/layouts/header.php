@@ -14,6 +14,9 @@
                 <li><a href="<?php echo base_url('san-pham/'); ?>">Tất cả sản phẩm</a></li>
                 <li>|</li>
 
+                <li><a href="<?php echo base_url('thu-vien-anh/'); ?>">Thư viện ảnh</a></li>
+                <li>|</li>
+
                 <li><a href="<?php echo base_url('lien-he/'); ?>">Liên hệ</a></li>
             </ul>
         </div>
@@ -27,19 +30,10 @@
                     <div class="wrapper">
                         <ul>
                             <?php foreach ( $list_category_menu as $category_menu ) : ?>
-                            <li>
-                            	<a href="<?php echo base_url('danh-muc/') . $category_menu->slug; ?>"><?php echo $category_menu->name; ?></a>
-                        	</li>
-
-                            <?php endforeach; ?>
-
-                            <li>
-                                <a href="<?php echo base_url('thu-vien-anh/'); ?>">Thư viện ảnh</a>
-                            </li>
-                            
-                            <!-- <li>
-                            	<a href="<?php echo base_url('lien-he/'); ?>">Liên hệ</a>
-                        	</li>  -->                           
+                                <li>
+                                	<a href="<?php echo base_url('danh-muc/') . $category_menu->slug; ?>"><?php echo $category_menu->name; ?></a>
+                            	</li>
+                            <?php endforeach; ?>                     
                         </ul>
                     </div>
                 </div>
