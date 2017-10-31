@@ -12,6 +12,7 @@
                     </div>
                     <div class="form-group">
                         <label for="image">Chọn ảnh tải lên</label>
+                        <span class="help-block">Kích thước tối ưu là 1600 x 700px</span>
                         <input type="file" id="image" name="image" class="form-control">
                     </div>
                 </div>

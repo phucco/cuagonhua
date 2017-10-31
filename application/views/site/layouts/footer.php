@@ -2,7 +2,7 @@
     <div class="wrapper">
 
         <div class="left">
-            <a href="javascript:void();"><span>Copyright 2017</span></a>
+            <span>Copyright 2017</span>
         </div>
 
         <div class="right">

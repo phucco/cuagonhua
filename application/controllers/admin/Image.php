@@ -105,5 +105,5 @@ class Image extends MY_Controller
 			$this->session->mess('Xóa ảnh có ID = ' . $id . ' không thành công.', 'danger');
 			redirect(base_url('admin/image/'), 'refresh');
 		}
-	}	
+	}
 }

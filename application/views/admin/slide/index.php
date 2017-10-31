@@ -2,7 +2,7 @@
     <div class="col-xs-12">
       	<div class="box">
             <div class="box-header">
-              	<h3 class="box-title">Có <?php echo $total; ?> ảnh trong thư viện</h3>
+              	<h3 class="box-title">Có <?php echo $total; ?> ảnh slide</h3>
 
             </div>
             <div class="box-body table-responsive no-padding">
@@ -18,14 +18,14 @@
 						<?php foreach ($list as $row) : ?>
 							<tr>
 								<td><?php echo $row->id; ?></td>
-	                            <td><img src="<?php echo base_url('upload/gallery/' . $row->file_name); ?>" width="100%" alt="<?php echo $row->alt; ?>"></td>
+	                            <td><img src="<?php echo base_url('upload/slide/' . $row->file_name); ?>" width="100%" alt="<?php echo $row->alt; ?>"></td>
 	                            <td><?php echo $row->image_width; ?> x <?php echo $row->image_height; ?> px</td>
 	                            <td><?php echo $row->created_at; ?></td>
 								<td>
-	                                <a href="<?php echo base_url('upload/gallery/' . $row->file_name); ?>" class="btn btn-success" title="Xem kích thước đầy đủ" target="_blank">
+	                                <a href="<?php echo base_url('upload/slide/' . $row->file_name); ?>" class="btn btn-success" title="Xem kích thước đầy đủ" target="_blank">
 	                                    <i class="fa fa-caret-square-o-right"></i>
 	                                </a>
-	                                <a href="<?php echo base_url('admin/image/del/' . $row->id); ?>" class="btn btn-danger" title="Xóa" onclick="return confirm('Xác nhận xóa?');">
+	                                <a href="<?php echo base_url('admin/slide/del/' . $row->id); ?>" class="btn btn-danger" title="Xóa" onclick="return confirm('Xác nhận xóa?');">
 	                                    <i class="fa fa-trash-o"></i>
 	                                </a>
                                 </td>

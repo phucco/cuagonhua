@@ -2,7 +2,7 @@
  ☐ Product Casourel: jCasourel
  ✔ Slide homepage: 4 1600x700 @done (17-10-23 11:19)
  ✔ Còn hàng/hết hàng @done (17-10-23 21:48)
- ☐ Responsive
+ ☐ Responsive, menu mobile
  ☐ Sub category in menu (dropdown menu)
  ☐ San_pham -> danh_muc Mẫu thiết kế hoa văn cửa
  http://inspirationalpixels.com/tutorials/creating-a-dropdown-menu-with-html-css
@@ -10,5 +10,6 @@
  ☐ Slug: San_pham/[danh mục]/[tên sản phẩm]
  ☐ show_404() custom function cho lỗi Không tìm thấy sản phẩm này
  ☐ Xử lý upload trùng tên file ảnh upload
- ☐ Slide controller
- ☐ 
+ ✔ Slide controller @done (17-10-31 17:17)
+ ☐ Xem thông báo tiếp, trước
+ ☐ Cài đặt một số: Link facebook foooter, ... ?
