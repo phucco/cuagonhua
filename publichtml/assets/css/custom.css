@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	background-color: #EFEFEF; 
 }
 
 span.red {
@@ -39,15 +40,28 @@ span.red {
 }
 
 #maximage {
-	top: 60px;
+	top: 120px;
 }
 
 #banner {
-	top: 60px;
+	top: 120px;
 }
 
 #main {
-	margin-top: 60px;
+	margin-top: 120px;
+	padding: .5em 0;
+}
+
+#header {
+	height: 120px;
+}
+
+#menu {
+	/*bottom: -100px;*/
+}
+
+.units-row .unit-20 {
+	padding-left: 1.2em;
 }
 
 #innerpage .colright2 {
@@ -58,12 +72,24 @@ span.red {
 
 /* Header */
 
+h1#logo {
+	top: -20px;
+}
+
+h1#logo > a > img {
+	width: 160px;
+}
+
 .nav-intro ul li a {
 	font-weight: bold;
 }
 
+.nav-intro ul li {
+	margin: 0 1.5em;
+}
+
 .menutop {
-	right: 20px;
+	right: 70px;
 }
 
 .menutop ul li a {
@@ -75,7 +101,7 @@ span.red {
 }
 
 .nav-intro .wrapper {
-    padding-left: 200px;
+    padding-left: 15px;
 }
 
 

@@ -3,7 +3,7 @@
     <div class="wrapper">
         <h1 id="logo">
             <a href="<?php echo base_url(); ?>">
-                <img src="<?php echo base_url(); ?>upload/600x600.png" alt="Logo Cửa gỗ nhựa Hoàng Hải" class="logo-circle">
+                <img src="<?php echo base_url(); ?>upload/600x600.png" alt="Logo Cửa gỗ nhựa Hoàng Hải" class="logo-none">
             </a>
         </h1>
         <div class="menutop">
