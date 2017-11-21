@@ -14,11 +14,6 @@
                     </div>
                 </div>             
 
-                <style type="text/css">
-                    .table select {
-                        width: 80px;
-                    }
-                </style>
                 <table class="table">
                     <tr>
                         <td>
@@ -47,24 +42,9 @@
             </div>
 
             <div class="unit-40 colright2">                
-            <img id="result" src="#" style="width: 400px; background: url('<?php echo base_url(); ?>upload/bangmau/H01.png');">
+                <img id="image-result" src="#" style="">
             </div>
 
-            <script type="text/javascript">
-                $("#selectbangmau").change(function(){
-                    var bangmau = $("#selectbangmau").val();
-                    
-                    alert(bangmau_src);
-                });
-                $("#selecthoavan").change(function(){
-                    var hoavan = $("#selecthoavan").val();
-                    var hoavan_src = "<?php echo base_url(); ?>upload/hoavan/" + hoavan;
-
-                    #("#result").attr("src", hoavan_src).load(function(){
-                        
-                    });
-                });
-            </script>
         </div>
 
     </div>
